@@ -26,3 +26,6 @@ The existing Part 1 website content was kept as the base while Part 2 styling an
 
 ### Styling note
 Part 2 styling is kept in the external stylesheet instead of using inline CSS.
+
+### Responsive navigation
+The mobile navigation was tested as part of the Part 2 responsive work.
