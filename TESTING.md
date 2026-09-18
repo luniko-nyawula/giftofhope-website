@@ -24,3 +24,7 @@ The pages were checked at a small width and the navigation button and stacked co
 
 ### Form test
 The enquiry form was tested with empty required fields and with completed fields.
+
+
+### Navigation link test
+The navigation links were checked to make sure the existing page destinations remain available.
