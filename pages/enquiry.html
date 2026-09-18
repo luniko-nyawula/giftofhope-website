@@ -3,65 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Make an enquiry with the Gift of Hope Foundation.">
     <title>Gift of Hope Foundation | Enquiry</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/script.js" defer></script>
 </head>
+
 <body>
 
-    <header>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="../index.html" aria-current="page">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a class="brand" href="../index.html">
+
+                <img src="../assets/images/logo.png"
+                     alt="Gift of Hope Foundation logo">
+
+                <span>
+                    Gift of Hope Foundation
+                </span>
+
+            </a>
+
+
+            <button class="nav-toggle"
+                    type="button"
+                    aria-controls="main-nav"
+                    aria-expanded="false">
+                Menu
+            </button>
+
+
+            <nav class="site-nav"
+                 id="main-nav"
+                 aria-label="Main navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="enquiry.html" aria-current="page">
+                            Enquiry
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
     </header>
 
-    <main>
-        <section>
-            <h1>Get Involved / Make an Enquiry</h1>
-            <p>Interested in volunteering or becoming a sponsor? Fill out the form below.</p>
 
-            <form action="#" method="POST">
-                <div>
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" id="fullname" name="fullname" required>
-                </div>
+    <main id="main-content">
 
-                <div>
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+        <section class="page-hero">
 
-                <div>
-                    <label for="phone">Cellphone Number:</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
+            <div class="container">
 
-                <div>
-                    <label for="enquiry-type">Enquiry Type:</label>
-                    <select id="enquiry-type" name="enquiry_type" required>
-                        <option value="">-- Select Option --</option>
-                        <option value="volunteer">Volunteer Opportunity</option>
-                        <option value="sponsor">Sponsorship / Donation</option>
-                        <option value="general">General Enquiry</option>
-                    </select>
-                </div>
+                <h1>
+                    Get Involved / Make an Enquiry
+                </h1>
 
-                <div>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
+            </div>
 
-                <button type="submit">Submit Enquiry</button>
-            </form>
         </section>
+
+
+        <section class="page-content">
+
+            <div class="container">
+
+                <div class="form-wrap">
+
+                    <p>
+                        Interested in volunteering or becoming a sponsor?
+                        Fill out the form below.
+                    </p>
+
+
+                    <form id="enquiry-form"
+                          action="#"
+                          method="post">
+
+
+                        <div class="form-row">
+
+                            <label for="fullname">
+                                Full Name
+                            </label>
+
+                            <input type="text"
+                                   id="fullname"
+                                   name="fullname"
+                                   autocomplete="name"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   autocomplete="email"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <label for="phone">
+                                Cellphone Number
+                            </label>
+
+                            <input type="tel"
+                                   id="phone"
+                                   name="phone"
+                                   autocomplete="tel"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <label for="enquiry-type">
+                                Enquiry Type
+                            </label>
+
+                            <select id="enquiry-type"
+                                    name="enquiry_type"
+                                    required>
+
+                                <option value="">
+                                    -- Select Option --
+                                </option>
+
+                                <option value="volunteer">
+                                    Volunteer Opportunity
+                                </option>
+
+                                <option value="sponsor">
+                                    Sponsorship / Donation
+                                </option>
+
+                                <option value="general">
+                                    General Enquiry
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea id="message"
+                                      name="message"
+                                      rows="6"
+                                      required></textarea>
+
+                        </div>
+
+
+                        <button class="btn btn-primary"
+                                type="submit">
+                            Submit Enquiry
+                        </button>
+
+
+                        <div id="form-status"
+                             class="status"
+                             role="status"
+                             aria-live="polite">
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Gift of Hope Foundation. All rights reserved.</p>
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <p>
+                &copy; 2026 Gift of Hope Foundation. All rights reserved.
+            </p>
+
+            <p class="small">
+                Community support, education and development.
+            </p>
+
+        </div>
+
     </footer>
 
 </body>
