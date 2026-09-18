@@ -3,51 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View the services and programmes offered by the Gift of Hope Foundation.">
     <title>Gift of Hope Foundation | Services</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/script.js" defer></script>
 </head>
+
 <body>
 
-    <header>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="../index.html" aria-current="page">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html" aria-current="page">Services</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a class="brand" href="../index.html">
+
+                <img src="../assets/images/logo.png"
+                     alt="Gift of Hope Foundation logo">
+
+                <span>
+                    Gift of Hope Foundation
+                </span>
+
+            </a>
+
+
+            <button class="nav-toggle"
+                    type="button"
+                    aria-controls="main-nav"
+                    aria-expanded="false">
+                Menu
+            </button>
+
+
+            <nav class="site-nav"
+                 id="main-nav"
+                 aria-label="Main navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html" aria-current="page">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="enquiry.html">
+                            Enquiry
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
     </header>
 
-    <main align="center">
-        <h1>Our Services &amp; Programmes</h1>
-        <img src="../assets/images/Services.png" alt="Gift of Hope Foundation services">
-        
-        <section>
-            <article>
-                <h2>Educational Support</h2>
-                <p>Offering tutoring, school supply distribution, and literacy programmes for youth.</p>
-            </article>
 
-            <article>
-                <h2>Food Assistance</h2>
-                <p>Providing sustainable meal support and grocery relief packages to local households.</p>
-            </article>
+    <main id="main-content">
 
-            <article>
-                <h2>Youth Development</h2>
-                <p>Skills training, CV building, and mentorship for unemployed South African youth.</p>
-            </article>
+        <section class="page-hero">
 
-            <article>
-                <h2>Community Outreach</h2>
-                <p>Collaborating with clinics to deliver essential healthcare resources and support.</p>
-            </article>
+            <div class="container">
+
+                <h1>
+                    Our Services &amp; Programmes
+                </h1>
+
+            </div>
+
         </section>
+
+
+        <section class="page-content">
+
+            <div class="container">
+
+                <img class="content-image"
+                     src="../assets/images/Services.png"
+                     alt="Gift of Hope Foundation services">
+
+
+                <div class="cards">
+
+                    <article class="card">
+
+                        <h2>
+                            Educational Support
+                        </h2>
+
+                        <p>
+                            Offering tutoring, school supply distribution
+                            and literacy programmes for youth.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h2>
+                            Food Assistance
+                        </h2>
+
+                        <p>
+                            Providing sustainable meal support and grocery
+                            relief packages to local households.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h2>
+                            Youth Development
+                        </h2>
+
+                        <p>
+                            Skills training, CV building and mentorship
+                            for unemployed South African youth.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card">
+
+                        <h2>
+                            Community Outreach
+                        </h2>
+
+                        <p>
+                            Collaborating with clinics to deliver essential
+                            healthcare resources and support.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p align="center">&copy; 2026 Gift of Hope Foundation. All rights reserved.</p>
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <p>
+                &copy; 2026 Gift of Hope Foundation. All rights reserved.
+            </p>
+
+            <p class="small">
+                Community support, education and development.
+            </p>
+
+        </div>
+
     </footer>
 
 </body>
