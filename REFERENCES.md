@@ -6,3 +6,4 @@
 4. W3C. HTML Standard. https://html.spec.whatwg.org/
 
 Accessed September 2026.
+5. MDN Web Docs. HTML: HyperText Markup Language. https://developer.mozilla.org/en-US/docs/Web/HTML
