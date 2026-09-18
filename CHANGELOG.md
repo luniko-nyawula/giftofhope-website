@@ -20,3 +20,6 @@
 
 ### Notes
 The enquiry form is a front-end demonstration only. It does not send data to a real server.
+
+### Part 1 preservation
+The existing Part 1 website content was kept as the base while Part 2 styling and responsive features were added.
