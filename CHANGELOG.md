@@ -29,3 +29,6 @@ Part 2 styling is kept in the external stylesheet instead of using inline CSS.
 
 ### Responsive navigation
 The mobile navigation was tested as part of the Part 2 responsive work.
+
+### Accessibility
+Simple keyboard focus states and navigation labels were kept in the Part 2 work.
