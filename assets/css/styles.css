@@ -1,4 +1,12 @@
-/* Basic styles for the Gift of Hope Foundation website */
+/*
+   Gift of Hope Foundation - Part 2 CSS
+
+   PART 2 REQUIREMENT: External stylesheet
+   This file is linked from all five HTML pages.
+*/
+
+
+/* PART 2: Default CSS styles - basic box sizing and page setup. */
 
 * {
     box-sizing: border-box;
@@ -18,353 +26,196 @@ body {
 }
 
 img {
+    /* PART 2: Responsive images - images stay inside their containers. */
     max-width: 100%;
     height: auto;
 }
 
-a {
-    color: #1f4e79;
-}
 
-a:hover {
-    color: #f49c12;
-}
-
-button,
-input,
-select,
-textarea {
-    font: inherit;
-}
-
-button {
-    cursor: pointer;
-}
-
-:focus {
-    outline: 2px solid #f49c12;
-    outline-offset: 2px;
-}
-
-
-/* Skip link */
-
-.skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 10px;
-    padding: 10px;
-    background-color: #ffffff;
-    color: #1f4e79;
-}
-
-.skip-link:focus {
-    left: 10px;
-    z-index: 1000;
-}
-
-
-/* Header and navigation */
-
-.site-header {
-    background-color: #1f4e79;
-    color: #ffffff;
-}
-
-.header-inner {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.brand:hover,
-.brand:focus,
-.brand:active {
-    color: #ffffff;
-}
-
-.brand img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    background-color: #ffffff;
-    border-radius: 50%;
-    padding: 2px;
-}
-
-.nav-toggle {
-    display: none;
-    margin-left: auto;
-    padding: 8px 12px;
-    color: #ffffff;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-}
-
-.nav-toggle:hover,
-.nav-toggle:focus,
-.nav-toggle:active {
-    background-color: #2e8b57;
-}
-
-.site-nav {
-    margin-left: auto;
-}
-
-.site-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 5px;
-}
-
-.site-nav a {
-    display: block;
-    padding: 8px 10px;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.site-nav a:hover,
-.site-nav a:focus,
-.site-nav a:active,
-.site-nav a[aria-current="page"] {
-    background-color: #2e8b57;
-    color: #ffffff;
-}
-
-
-/* General page layout */
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-main {
-    min-height: 65vh;
-}
-
-
-/* Home hero section */
-
-.hero {
-    padding: 60px 0;
-    background-color: #eef6fb;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-    align-items: center;
-}
-
-.eyebrow {
-    color: #2e8b57;
-    font-weight: bold;
-    text-transform: uppercase;
-}
+/* PART 2: Typography styles. */
 
 h1,
 h2,
 h3 {
-    margin-top: 0;
     color: #1f4e79;
     line-height: 1.2;
 }
 
 h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 1.35rem;
 }
 
-.hero p {
-    max-width: 700px;
-    font-size: 18px;
-}
-
-.actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
+p {
+    max-width: 75ch;
 }
 
 
-/* Buttons */
+/* PART 2: Layout structure - shared page width and spacing. */
 
-.btn {
-    display: inline-block;
-    padding: 10px 16px;
-    border-radius: 5px;
-    border: 2px solid transparent;
+header,
+main,
+footer {
+    width: 100%;
+}
+
+header {
+    background-color: #1f4e79;
+    color: #ffffff;
+    padding: 15px 5%;
+}
+
+header > div {
+    text-align: center;
+}
+
+header p {
+    margin: 0 0 10px;
+}
+
+header p a {
+    color: #ffffff;
     text-decoration: none;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-.btn-primary {
-    background-color: #f49c12;
-    color: #222222;
+.logo {
+    width: 90px;
+    height: auto;
+    margin: 5px auto 10px;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
+
+/* PART 2: Responsive navigation structure. */
+
+nav ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+/* PART 2: Pseudo-classes - hover, focus and active states. */
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    background-color: #2e8b57;
+    color: #ffffff;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #f49c12;
+    color: #222222;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+/* PART 2: Pseudo-classes are also used on the button. */
+
+.btn:hover,
+.btn:focus,
+.btn:active {
     background-color: #d98400;
     color: #222222;
 }
 
-.btn-secondary {
-    background-color: #ffffff;
-    color: #1f4e79;
-    border-color: #1f4e79;
+
+/* PART 2: General content layout. */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: left;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary:active {
-    background-color: #1f4e79;
-    color: #ffffff;
-}
-
-
-/* Home image */
-
-.hero-card {
-    padding: 15px;
-    background-color: #ffffff;
-    border: 1px solid #d9e0e6;
-    border-radius: 10px;
-}
-
-.hero-card img {
-    display: block;
-    width: 100%;
-}
-
-
-/* Sections */
-
-.section {
-    padding: 50px 0;
-}
-
-.section-alt {
-    background-color: #f4f4f4;
-}
-
-.section-intro {
-    max-width: 700px;
-}
-
-
-/* Cards */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.card {
+main > section {
+    margin-bottom: 40px;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #d9e0e6;
-    border-radius: 10px;
-}
-
-.card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
-}
-
-.card p {
-    margin-bottom: 0;
+    border-radius: 8px;
 }
 
 
-/* Page headings */
+/* PART 2: Decoration and colour. */
 
-.page-hero {
-    padding: 45px 0;
-    background-color: #1f4e79;
-    color: #ffffff;
+.Home {
+    background-color: #eef6fb;
+    text-align: center;
 }
 
-.page-hero h1 {
-    margin-bottom: 0;
-    color: #ffffff;
-}
-
-
-/* Page content */
-
-.page-content {
-    padding: 40px 0;
-}
-
-.content-image {
-    display: block;
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto 30px;
-    border-radius: 10px;
-}
-
-.two-col {
+main section section,
+main > section > div {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-
-/* Enquiry form */
-
-.form-wrap {
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 25px;
+article {
+    padding: 20px;
     border: 1px solid #d9e0e6;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: #ffffff;
 }
 
-.form-row {
+
+/* PART 2: Layout structure for sections that contain articles. */
+
+main > section > article {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin: 0 1% 20px 0;
+}
+
+
+/* PART 2: Keep a single article section full width. */
+
+main > section > article:only-child {
+    width: 100%;
+    margin-right: 0;
+}
+
+
+/* PART 2: Pseudo-class decoration on cards. */
+
+article:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+
+form {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+form div {
     margin-bottom: 18px;
 }
 
@@ -381,135 +232,127 @@ textarea {
     padding: 10px;
     border: 1px solid #aaaaaa;
     border-radius: 5px;
-    background-color: #ffffff;
+    font: inherit;
 }
 
-textarea {
-    resize: vertical;
-}
+
+/* PART 2: Pseudo-class for accessible form focus. */
 
 input:focus,
 select:focus,
-textarea:focus {
-    border-color: #1f4e79;
+textarea:focus,
+button:focus {
+    outline: 2px solid #f49c12;
+    outline-offset: 2px;
 }
 
-.status {
+
+button {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #f49c12;
+    color: #222222;
+    font-weight: bold;
+}
+
+button:hover,
+button:active {
+    background-color: #d98400;
+}
+
+
+/* PART 2: Mobile menu button.
+   It is hidden on large screens. */
+
+.nav-toggle {
     display: none;
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #eaf6ee;
-    border: 1px solid #9ed0ac;
-}
-
-.status.show {
-    display: block;
+    margin: 10px auto;
 }
 
 
-/* Footer */
-
-.site-footer {
-    margin-top: 30px;
-    padding: 25px 0;
+footer {
+    padding: 20px 5%;
     background-color: #173a5a;
     color: #ffffff;
-}
-
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.site-footer p {
-    margin: 0;
-}
-
-.small {
-    font-size: 14px;
-    color: #dbe7f0;
+    text-align: center;
 }
 
 
-/* Tablet */
+/* PART 2: Tablet breakpoint. */
 
 @media (max-width: 900px) {
 
-    .hero-grid {
+    main section section,
+    main > section > div {
         grid-template-columns: 1fr;
     }
 
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
+    h1 {
+        font-size: 2.2rem;
     }
 }
 
 
-/* Mobile */
+/* PART 2: Mobile breakpoint.
+   This gives the site a responsive layout. */
 
 @media (max-width: 700px) {
+
+    /* PART 2: Responsive navigation. */
 
     .nav-toggle {
         display: block;
     }
 
-    .site-nav {
+    nav {
         display: none;
-        width: 100%;
-        margin-left: 0;
     }
 
-    .site-nav.open {
+    nav.open {
         display: block;
     }
 
-    .site-nav ul {
+    nav ul {
         flex-direction: column;
+        gap: 5px;
     }
 
-    .site-nav a {
-        padding: 10px;
+    nav a {
+        text-align: center;
     }
 
-    .header-inner {
-        align-items: center;
-    }
 
-    .cards,
-    .two-col {
-        grid-template-columns: 1fr;
-    }
+    /* PART 2: Responsive typography. */
 
     h1 {
-        font-size: 34px;
+        font-size: 1.9rem;
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 1.6rem;
     }
 
     h3 {
-        font-size: 20px;
+        font-size: 1.2rem;
     }
 
-    .hero {
-        padding: 45px 0;
+
+    /* PART 2: Responsive layout for narrow screens. */
+
+    main {
+        width: 92%;
+        padding: 20px 0;
     }
 
-    .page-content,
-    .section {
-        padding: 35px 0;
+    main > section > article {
+        width: 100%;
+        margin-right: 0;
     }
 }
 
 
-/* Small mobile screens */
+/* PART 2: Small mobile breakpoint. */
 
 @media (max-width: 450px) {
 
@@ -517,28 +360,15 @@ textarea:focus {
         font-size: 15px;
     }
 
-    h1 {
-        font-size: 30px;
+    header p a {
+        font-size: 1.2rem;
     }
 
-    h2 {
-        font-size: 23px;
+    .logo {
+        width: 75px;
     }
 
-    .brand span {
-        font-size: 14px;
-    }
-
-    .actions {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .form-wrap {
-        padding: 18px;
+    main > section {
+        padding: 15px;
     }
 }
