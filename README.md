@@ -45,3 +45,7 @@ The main page is in `index.html`. The other pages are inside the `pages` folder.
 ## Simple setup
 
 No framework or build tool is required. The website can be opened directly in a browser.
+
+## Responsive testing
+
+The layout should be checked at desktop, tablet and mobile widths to make sure the navigation and content remain usable.
