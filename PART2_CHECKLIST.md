@@ -18,3 +18,6 @@
 | Changelog | `CHANGELOG.md` |
 | References | `REFERENCES.md` |
 | Testing notes | `TESTING.md` |
+
+
+The comments marked `PART 2` are included to make the assessed changes easy to identify in the code.
