@@ -49,3 +49,7 @@ No framework or build tool is required. The website can be opened directly in a 
 ## Responsive testing
 
 The layout should be checked at desktop, tablet and mobile widths to make sure the navigation and content remain usable.
+
+## Navigation
+
+The navigation is shared across the pages so visitors can move between Home, About Us, Services, Enquiry and Contact Us.
