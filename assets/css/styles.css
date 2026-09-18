@@ -1,13 +1,11 @@
-/*
-   Gift of Hope Foundation - Part 2 CSS
+/* 
+   Gift of Hope Foundation - Part 2 stylesheet
 
-   PART 2 REQUIREMENT: External stylesheet
-   This file is linked from all five HTML pages.
+   PART 2 requirement: External stylesheet
+   This one CSS file is linked to all five pages.
 */
 
-
-/* PART 2: Default CSS styles - basic box sizing and page setup. */
-
+/* PART 2: Default CSS styles. */
 * {
     box-sizing: border-box;
 }
@@ -25,15 +23,13 @@ body {
     background-color: #ffffff;
 }
 
+/* PART 2: Responsive images. */
 img {
-    /* PART 2: Responsive images - images stay inside their containers. */
     max-width: 100%;
     height: auto;
 }
 
-
 /* PART 2: Typography styles. */
-
 h1,
 h2,
 h3 {
@@ -42,42 +38,26 @@ h3 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 
 h3 {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
 }
 
 p {
-    max-width: 75ch;
+    line-height: 1.6;
 }
 
-
-/* PART 2: Layout structure - shared page width and spacing. */
-
-header,
-main,
-footer {
-    width: 100%;
-}
-
+/* PART 2: Layout structure and spacing. */
 header {
     background-color: #1f4e79;
     color: #ffffff;
     padding: 15px 5%;
-}
-
-header > div {
-    text-align: center;
-}
-
-header p {
-    margin: 0 0 10px;
 }
 
 header p a {
@@ -88,22 +68,33 @@ header p a {
 }
 
 .logo {
+    display: block;
     width: 90px;
-    height: auto;
-    margin: 5px auto 10px;
+    margin: 10px auto;
 }
 
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
 
-/* PART 2: Responsive navigation structure. */
+main > section {
+    margin-bottom: 35px;
+    padding: 20px;
+}
 
+/* PART 2: Flexbox is used for the navigation layout. */
 nav ul {
-    list-style: none;
-    margin: 10px 0 0;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav a {
@@ -111,20 +102,53 @@ nav a {
     padding: 8px 12px;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-
-/* PART 2: Pseudo-classes - hover, focus and active states. */
+/* PART 2: Pseudo-classes for user interaction. */
+a:hover,
+a:focus,
+a:active {
+    color: #f49c12;
+}
 
 nav a:hover,
 nav a:focus,
-nav a:active {
+nav a:active,
+nav a[aria-current="page"] {
     background-color: #2e8b57;
     color: #ffffff;
 }
 
+/* PART 2: Decoration and colour for sections and content cards. */
+.Home {
+    background-color: #eef6fb;
+    border-radius: 8px;
+}
 
+article {
+    display: inline-block;
+    vertical-align: top;
+    width: 48%;
+    margin: 0 1% 20px 0;
+    padding: 20px;
+    border: 1px solid #d9e0e6;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+/* PART 2: A single article can use the full available width. */
+article:only-child {
+    width: 100%;
+    margin-right: 0;
+}
+
+/* PART 2: Hover state for content cards. */
+article:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+/* PART 2: Style links that were already used as buttons in Part 1. */
 .btn {
     display: inline-block;
     padding: 10px 15px;
@@ -135,9 +159,6 @@ nav a:active {
     font-weight: bold;
 }
 
-
-/* PART 2: Pseudo-classes are also used on the button. */
-
 .btn:hover,
 .btn:focus,
 .btn:active {
@@ -145,72 +166,9 @@ nav a:active {
     color: #222222;
 }
 
-
-/* PART 2: General content layout. */
-
-main {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 30px 0;
-    text-align: left;
-}
-
-main > section {
-    margin-bottom: 40px;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-
-/* PART 2: Decoration and colour. */
-
-.Home {
-    background-color: #eef6fb;
-    text-align: center;
-}
-
-main section section,
-main > section > div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-article {
-    padding: 20px;
-    border: 1px solid #d9e0e6;
-    border-radius: 8px;
-    background-color: #ffffff;
-}
-
-
-/* PART 2: Layout structure for sections that contain articles. */
-
-main > section > article {
-    display: inline-block;
-    vertical-align: top;
-    width: 48%;
-    margin: 0 1% 20px 0;
-}
-
-
-/* PART 2: Keep a single article section full width. */
-
-main > section > article:only-child {
-    width: 100%;
-    margin-right: 0;
-}
-
-
-/* PART 2: Pseudo-class decoration on cards. */
-
-article:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
-}
-
-
+/* PART 2: Basic form styling. */
 form {
+    width: 100%;
     max-width: 760px;
     margin: 0 auto;
 }
@@ -235,9 +193,7 @@ textarea {
     font: inherit;
 }
 
-
-/* PART 2: Pseudo-class for accessible form focus. */
-
+/* PART 2: Focus state makes form controls easier to use. */
 input:focus,
 select:focus,
 textarea:focus,
@@ -246,7 +202,6 @@ button:focus {
     outline-offset: 2px;
 }
 
-
 button {
     padding: 10px 15px;
     border: 0;
@@ -254,6 +209,7 @@ button {
     background-color: #f49c12;
     color: #222222;
     font-weight: bold;
+    cursor: pointer;
 }
 
 button:hover,
@@ -261,31 +217,30 @@ button:active {
     background-color: #d98400;
 }
 
-
-/* PART 2: Mobile menu button.
-   It is hidden on large screens. */
-
-.nav-toggle {
-    display: none;
-    margin: 10px auto;
-}
-
-
 footer {
     padding: 20px 5%;
     background-color: #173a5a;
     color: #ffffff;
-    text-align: center;
 }
 
+/* PART 2: The JavaScript adds this message after a valid enquiry. */
+.form-message {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #eaf6ee;
+    border: 1px solid #9ed0ac;
+}
+
+/* PART 2: Mobile navigation button is hidden on larger screens. */
+.mobile-menu-button {
+    display: none;
+    margin: 10px auto;
+}
 
 /* PART 2: Tablet breakpoint. */
-
 @media (max-width: 900px) {
-
-    main section section,
-    main > section > div {
-        grid-template-columns: 1fr;
+    article {
+        width: 48%;
     }
 
     h1 {
@@ -293,37 +248,37 @@ footer {
     }
 }
 
-
-/* PART 2: Mobile breakpoint.
-   This gives the site a responsive layout. */
-
+/* PART 2: Mobile breakpoint and responsive navigation. */
 @media (max-width: 700px) {
-
-    /* PART 2: Responsive navigation. */
-
-    .nav-toggle {
+    .mobile-menu-button {
         display: block;
     }
 
-    nav {
+    /* JavaScript adds .mobile-open when the menu button is selected. */
+    header nav ul {
         display: none;
-    }
-
-    nav.open {
-        display: block;
-    }
-
-    nav ul {
         flex-direction: column;
-        gap: 5px;
+        width: 100%;
     }
 
-    nav a {
+    header nav.mobile-open ul {
+        display: flex;
+    }
+
+    header nav a {
+        width: 100%;
         text-align: center;
     }
 
+    article {
+        width: 100%;
+        margin-right: 0;
+    }
 
-    /* PART 2: Responsive typography. */
+    main {
+        width: 92%;
+        padding: 20px 0;
+    }
 
     h1 {
         font-size: 1.9rem;
@@ -336,26 +291,10 @@ footer {
     h3 {
         font-size: 1.2rem;
     }
-
-
-    /* PART 2: Responsive layout for narrow screens. */
-
-    main {
-        width: 92%;
-        padding: 20px 0;
-    }
-
-    main > section > article {
-        width: 100%;
-        margin-right: 0;
-    }
 }
 
-
-/* PART 2: Small mobile breakpoint. */
-
+/* PART 2: Small mobile breakpoint for responsive typography and spacing. */
 @media (max-width: 450px) {
-
     body {
         font-size: 15px;
     }
@@ -366,6 +305,10 @@ footer {
 
     .logo {
         width: 75px;
+    }
+
+    main {
+        padding: 15px 0;
     }
 
     main > section {
