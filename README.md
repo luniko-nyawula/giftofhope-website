@@ -41,3 +41,7 @@ https://github.com/luniko-nyawula/giftofhope-website
 ## Project folder structure
 
 The main page is in `index.html`. The other pages are inside the `pages` folder. CSS and JavaScript are inside the `assets` folder.
+
+## Simple setup
+
+No framework or build tool is required. The website can be opened directly in a browser.
