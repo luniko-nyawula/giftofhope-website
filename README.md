@@ -37,3 +37,7 @@ The original Part 1 page content and structure were kept as the base. Part 2 add
 
 ## Repository
 https://github.com/luniko-nyawula/giftofhope-website
+
+## Project folder structure
+
+The main page is in `index.html`. The other pages are inside the `pages` folder. CSS and JavaScript are inside the `assets` folder.
