@@ -68,3 +68,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* PART 2: The script waits until the page has loaded before finding elements. */
+
+/* PART 2: The menu closes when a navigation link is selected. */
