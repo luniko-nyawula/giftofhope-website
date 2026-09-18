@@ -21,3 +21,6 @@
 
 
 The comments marked `PART 2` are included to make the assessed changes easy to identify in the code.
+
+
+JavaScript is kept small and is used only for responsive navigation and simple form feedback.
