@@ -20,3 +20,7 @@ The pages were checked at a normal desktop browser width and the navigation and 
 
 ### Mobile check
 The pages were checked at a small width and the navigation button and stacked content were tested.
+
+
+### Form test
+The enquiry form was tested with empty required fields and with completed fields.
