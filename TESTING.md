@@ -17,3 +17,6 @@ Open the website in a browser at desktop, tablet and mobile widths. At widths be
 
 ### Desktop check
 The pages were checked at a normal desktop browser width and the navigation and content remained visible.
+
+### Mobile check
+The pages were checked at a small width and the navigation button and stacked content were tested.
