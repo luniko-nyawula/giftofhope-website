@@ -53,3 +53,7 @@ The layout should be checked at desktop, tablet and mobile widths to make sure t
 ## Navigation
 
 The navigation is shared across the pages so visitors can move between Home, About Us, Services, Enquiry and Contact Us.
+
+## Browser testing
+
+The website can be tested in a modern browser without installing extra software.
