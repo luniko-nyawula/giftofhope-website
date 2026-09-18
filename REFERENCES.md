@@ -7,3 +7,4 @@
 
 Accessed September 2026.
 5. MDN Web Docs. HTML: HyperText Markup Language. https://developer.mozilla.org/en-US/docs/Web/HTML
+6. MDN Web Docs. Responsive web design basics. https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
