@@ -1,183 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about the Gift of Hope Foundation.">
-    <title>Gift of Hope Foundation | About Us</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <script src="../assets/js/script.js" defer></script>
+
+    <meta name="viewport"
+          conent="width=device-width, initial-scale=1.0">
+
+    <title>
+        Gift of Hope Foundation | About us
+    </title>
+
+    <!-- PART 2: External stylesheet added so the page uses shared CSS. -->
+    <link rel="stylesheet"
+          href="../assets/css/styles.css">
+
+    <!-- PART 2: External JavaScript added for the responsive navigation. -->
+    <script src="../assets/js/script.js"
+            defer></script>
+
 </head>
+
 
 <body>
 
-    <a class="skip-link" href="#main-content">
-        Skip to main content
-    </a>
+    <header>
 
+        <!-- PART 2: Mobile navigation button.
+             Hidden on large screens and shown on small screens by CSS. -->
+        <button class="nav-toggle"
+                type="button"
+                aria-controls="main-navigation"
+                aria-expanded="false">
+            Menu
+        </button>
 
-    <header class="site-header">
+        <nav id="main-navigation"
+             aria-label="Main Navigation">
 
-        <div class="header-inner">
+            <ul>
 
-            <a class="brand" href="../index.html">
+                <li>
+                    <a href="../index.html"
+                       aria-current="page">
+                        Home
+                    </a>
+                </li>
 
-                <img src="../assets/images/logo.png"
-                     alt="Gift of Hope Foundation logo">
+                <li>
+                    <a href="about.html"
+                       aria-current="page">
+                        About us
+                    </a>
+                </li>
 
-                <span>
-                    Gift of Hope Foundation
-                </span>
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
 
-            </a>
+                <li>
+                    <a href="enquiry.html">
+                        Enquiry
+                    </a>
+                </li>
 
+                <li>
+                    <a href="contact.html">
+                        Contact us
+                    </a>
+                </li>
 
-            <button class="nav-toggle"
-                    type="button"
-                    aria-controls="main-nav"
-                    aria-expanded="false">
-                Menu
-            </button>
+            </ul>
 
-
-            <nav class="site-nav"
-                 id="main-nav"
-                 aria-label="Main navigation">
-
-                <ul>
-
-                    <li>
-                        <a href="../index.html">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="about.html" aria-current="page">
-                            About Us
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="services.html">
-                            Services
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="enquiry.html">
-                            Enquiry
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">
-                            Contact Us
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
+        </nav>
 
     </header>
 
 
-    <main id="main-content">
+    <main align="center">
 
-        <section class="page-hero">
+        <h1>
+            About us
+        </h1>
 
-            <div class="container">
+        <img src="../assets/images/about.png"
+             alt="Gift of Hope Foundation about us">
+
+
+        <section>
+
+            <article>
 
                 <h1>
-                    About Us
+                    About Gift of Hope Foundation
                 </h1>
 
-            </div>
+                <p>
+                    Gift of Hope Foundation is a South African
+                    non-profit organisation established in 2018
+                    to support vulnerable children, unemployed youth,
+                    and disadvantage families.
+                </p>
+
+            </article>
 
         </section>
 
 
-        <section class="page-content">
+        <section>
 
-            <div class="container">
+            <article>
 
-                <img class="content-image"
-                     src="../assets/images/about.png"
-                     alt="Gift of Hope Foundation about us">
+                <h2>
+                    Our Mission
+                </h2>
 
+                <p>
+                    Is to improve the lives of vulnerable communities
+                    by providing practical support, education and
+                    development opportunities.
+                </p>
 
-                <div class="two-col">
-
-                    <article class="card">
-
-                        <h2>
-                            About Gift of Hope Foundation
-                        </h2>
-
-                        <p>
-                            Gift of Hope Foundation is a South African
-                            non-profit organisation established in 2018
-                            to support vulnerable children, unemployed youth
-                            and disadvantaged families.
-                        </p>
-
-                    </article>
+            </article>
 
 
-                    <article class="card">
+            <article>
 
-                        <h2>
-                            Our Mission
-                        </h2>
+                <h2>
+                    Our Vision
+                </h2>
 
-                        <p>
-                            Our mission is to improve the lives of vulnerable
-                            communities by providing practical support,
-                            education and development opportunities.
-                        </p>
+                <p>
+                    To build stronger communities where everyone has
+                    access to opportunities that improve their quality
+                    of life.
+                </p>
 
-                    </article>
-
-                </div>
-
-
-                <article class="card section">
-
-                    <h2>
-                        Our Vision
-                    </h2>
-
-                    <p>
-                        Our vision is to build stronger communities where
-                        everyone has access to opportunities that improve
-                        their quality of life.
-                    </p>
-
-                </article>
-
-            </div>
+            </article>
 
         </section>
 
     </main>
 
 
-    <footer class="site-footer">
+    <footer>
 
-        <div class="container footer-inner">
-
-            <p>
-                &copy; 2026 Gift of Hope Foundation. All rights reserved.
-            </p>
-
-            <p class="small">
-                Community support, education and development.
-            </p>
-
-        </div>
+        <p align="center">
+            &copy; 2026 Gift of Hope Foundation. All rights reserved.
+        </p>
 
     </footer>
 
