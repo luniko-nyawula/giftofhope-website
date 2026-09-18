@@ -14,3 +14,6 @@
 
 ## Manual browser test
 Open the website in a browser at desktop, tablet and mobile widths. At widths below 700px, test the Menu button and check that the navigation opens and closes.
+
+### Desktop check
+The pages were checked at a normal desktop browser width and the navigation and content remained visible.
