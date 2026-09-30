@@ -335,3 +335,124 @@ footer {
 /* PART 2: The mobile breakpoint works together with JavaScript for the menu. */
 
 /* PART 2: Smaller heading sizes improve readability on small screens. */
+
+
+/* PART 3: Small transitions make buttons and cards respond smoothly. */
+.btn,
+button,
+article {
+    transition: 0.3s ease;
+}
+
+/* PART 3: Simple page-load animation used by JavaScript. */
+.page-hero {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page-ready .page-hero {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* PART 3: Service search area. */
+.service-search {
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.service-search input {
+    margin-top: 5px;
+}
+
+/* PART 3: Accordion styles. */
+.accordion {
+    margin-top: 35px;
+}
+
+.accordion-button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+    background-color: #eef6fb;
+    color: #1f4e79;
+    border: 1px solid #d9e0e6;
+}
+
+.accordion-button[aria-expanded="true"] {
+    background-color: #dceef9;
+}
+
+.accordion-content {
+    display: none;
+    margin: 0;
+    padding: 15px;
+    border: 1px solid #d9e0e6;
+    border-top: 0;
+}
+
+.accordion-content.open {
+    display: block;
+}
+
+/* PART 3: Form error feedback. */
+.status.error {
+    background-color: #fbeaea;
+    border-color: #d89a9a;
+}
+
+/* PART 3: Google Maps embed. */
+.map-section {
+    margin-top: 35px;
+}
+
+.map-section iframe {
+    width: 100%;
+    min-height: 300px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* PART 3: Responsive navigation for the existing Part 2 nav button. */
+.nav-toggle {
+    display: none;
+    margin: 10px auto;
+    border: 1px solid #ffffff;
+}
+
+/* PART 3: Responsive navigation and typography. */
+@media (max-width: 700px) {
+
+    .nav-toggle {
+        display: block;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav.open ul {
+        display: flex;
+    }
+
+    header nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .service-search {
+        width: 100%;
+    }
+}
+
+/* PART 3: Smaller screens. */
+@media (max-width: 450px) {
+
+    .map-section iframe {
+        min-height: 240px;
+    }
+}
