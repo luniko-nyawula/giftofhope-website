@@ -10,7 +10,10 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Make an enquiry with the Gift of Hope Foundation.">
+          content="Contact the Gift of Hope Foundation to ask about volunteering, sponsorship, donations or community support.">
+
+    <meta name="keywords"
+          content="Gift of Hope Foundation enquiry, volunteer, sponsorship, donation, community support">
 
     <title>
         Gift of Hope Foundation | Enquiry
@@ -138,8 +141,9 @@
 
 
                     <form id="enquiry-form"
-                          action="#"
-                          method="post">
+                          action="mailto:info@giftofhope.org.za"
+                          method="post"
+                          enctype="text/plain">
 
 
                         <div class="form-row">
@@ -182,7 +186,9 @@
                                    id="phone"
                                    name="phone"
                                    autocomplete="tel"
+                                   pattern="[0-9+() -]{7,20}"
                                    required>
+                            <small>Enter a valid cellphone number.</small>
 
                         </div>
 
@@ -227,6 +233,7 @@
                             <textarea id="message"
                                       name="message"
                                       rows="6"
+                                      minlength="10"
                                       required></textarea>
 
                         </div>
