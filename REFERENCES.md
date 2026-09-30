@@ -10,3 +10,8 @@ Accessed September 2026.
 6. MDN Web Docs. Responsive web design basics. https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 
 7. MDN Web Docs. Accessibility. https://developer.mozilla.org/en-US/docs/Web/Accessibility
+
+8. Google Maps Platform. Maps Embed API. https://developers.google.com/maps/documentation/embed/ 
+9. Google Search Central. SEO Starter Guide. https://developers.google.com/search/docs/fundamentals/seo-starter-guide
+
+Accessed September 2026.
