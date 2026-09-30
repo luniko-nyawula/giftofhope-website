@@ -32,3 +32,32 @@ The mobile navigation was tested as part of the Part 2 responsive work.
 
 ### Accessibility
 Simple keyboard focus states and navigation labels were kept in the Part 2 work.
+
+## Part 3 - 30 September 2026
+
+### Functionality
+- Added a programme search field to the Services page.
+- Added a simple common-questions accordion.
+- Added a small page-load transition.
+- Improved the enquiry form with client-side validation.
+- Added phone number pattern checking and a minimum message length.
+- Added email preparation using the visitor's default email application.
+
+### SEO
+- Improved page titles and meta descriptions.
+- Added keyword meta tags to the main pages.
+- Kept clear heading levels and internal links.
+- Improved image alt text and added lazy loading where suitable.
+- Added `robots.txt`.
+- Added `sitemap.xml`.
+
+### External service
+- Added a Google Maps embed for the Durban area on the Contact page.
+
+### Deployment
+- Added a GitHub Pages workflow in `.github/workflows/pages.yml`.
+
+### Notes
+- The Part 1 and Part 2 website remains the base for Part 3.
+- The Part 3 additions use basic HTML, CSS and JavaScript so the project remains easy to understand.
+- The enquiry form still depends on the visitor having an email application configured on their device.
