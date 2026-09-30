@@ -468,3 +468,10 @@ article {
 .status.show {
     display: block;
 }
+
+/* PART 3: Small helper text for search and form guidance. */
+.small,
+small {
+    font-size: 14px;
+    color: #555555;
+}
