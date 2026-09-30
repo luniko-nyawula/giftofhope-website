@@ -344,15 +344,13 @@ article {
     transition: 0.3s ease;
 }
 
-/* PART 3: Simple page-load animation used by JavaScript. */
+/* PART 3: Simple page-load transition used by JavaScript. */
 .page-hero {
-    opacity: 0;
     transform: translateY(10px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 .page-ready .page-hero {
-    opacity: 1;
     transform: translateY(0);
 }
 
@@ -455,4 +453,18 @@ article {
     .map-section iframe {
         min-height: 240px;
     }
+}
+
+
+/* PART 3: Form feedback is hidden until JavaScript has a message to show. */
+.status {
+    display: none;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #eaf6ee;
+    border: 1px solid #9ed0ac;
+}
+
+.status.show {
+    display: block;
 }
