@@ -57,3 +57,36 @@ The navigation is shared across the pages so visitors can move between Home, Abo
 ## Browser testing
 
 The website can be tested in a modern browser without installing extra software.
+
+## Part 3 changes
+
+Part 3 focuses on functionality, forms, SEO and deployment.
+
+### JavaScript functionality
+- Added a simple search box on the Services page.
+- Added a simple accordion for common questions.
+- Added a small page-load transition.
+- Improved the enquiry form with client-side validation.
+- The enquiry form prepares an email using the visitor's default email application.
+
+### SEO improvements
+- Added relevant page descriptions and keywords.
+- Kept clear H1, H2 and H3 headings.
+- Kept descriptive internal links.
+- Improved image alt text.
+- Added lazy loading to content images.
+- Added `robots.txt` and `sitemap.xml`.
+
+### External service
+- Added a Google Maps embed on the Contact page for the Durban area.
+
+### Deployment
+A GitHub Pages workflow is included in `.github/workflows/pages.yml`.
+
+To publish the website, GitHub Pages must use **GitHub Actions** as the deployment source in the repository settings.
+
+Expected website address:
+https://luniko-nyawula.github.io/giftofhope-website/
+
+### Part 3 limitation
+The enquiry form uses a mailto link because this student project does not have a server-side email system. The visitor's normal email application opens with the form details already prepared.
