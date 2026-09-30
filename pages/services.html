@@ -10,7 +10,10 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="View the services and programmes offered by the Gift of Hope Foundation.">
+          content="Explore Gift of Hope Foundation programmes including educational support, food assistance, youth development and community outreach.">
+
+    <meta name="keywords"
+          content="Gift of Hope Foundation services, education support, food assistance, youth development, community outreach">
 
     <title>
         Gift of Hope Foundation | Services
@@ -130,13 +133,23 @@
 
                 <img class="content-image"
                      src="../assets/images/Services.png"
-                     alt="Gift of Hope Foundation services">
+                     alt="Gift of Hope Foundation services and community programmes"
+                     loading="lazy">
+
+                <!-- PART 3: Simple search allows users to find a programme by name. -->
+                <div class="service-search">
+                    <label for="service-search">Search programmes</label>
+                    <input type="search"
+                           id="service-search"
+                           placeholder="Type a programme name">
+                    <p id="service-count" class="small"></p>
+                </div>
 
 
                 <!-- Programme/service cards -->
-                <div class="cards">
+                <div class="cards" id="service-list">
 
-                    <article class="card">
+                    <article class="card service-card" data-service="Educational Support">
 
                         <h2>
                             Educational Support
@@ -150,7 +163,7 @@
                     </article>
 
 
-                    <article class="card">
+                    <article class="card service-card" data-service="Food Assistance">
 
                         <h2>
                             Food Assistance
@@ -164,7 +177,7 @@
                     </article>
 
 
-                    <article class="card">
+                    <article class="card service-card" data-service="Youth Development">
 
                         <h2>
                             Youth Development
@@ -178,7 +191,7 @@
                     </article>
 
 
-                    <article class="card">
+                    <article class="card service-card" data-service="Community Outreach">
 
                         <h2>
                             Community Outreach
@@ -192,6 +205,25 @@
                     </article>
 
                 </div>
+
+                <!-- PART 3: Small accordion for extra programme information. -->
+                <section class="accordion">
+                    <h2>Common Questions</h2>
+
+                    <button class="accordion-button" type="button" aria-expanded="false">
+                        How can I get involved?
+                    </button>
+                    <p class="accordion-content">
+                        You can contact the foundation through the enquiry page to ask about volunteering, sponsorship or other support.
+                    </p>
+
+                    <button class="accordion-button" type="button" aria-expanded="false">
+                        Who are the programmes for?
+                    </button>
+                    <p class="accordion-content">
+                        The programmes support vulnerable children, unemployed youth and disadvantaged families.
+                    </p>
+                </section>
 
             </div>
 
