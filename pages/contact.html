@@ -227,6 +227,78 @@
 
                 </section>
 
+                <!-- PART 3: Separate general contact form for messages to the organisation. -->
+                <section class="section contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <p>Use this form for a general message or question.</p>
+
+                    <form id="contact-form"
+                          action="mailto:info@giftofhope.org.za"
+                          method="post"
+                          enctype="text/plain">
+
+                        <div class="form-row">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text"
+                                   id="contact-name"
+                                   name="full_name"
+                                   autocomplete="name"
+                                   required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email"
+                                   id="contact-email"
+                                   name="email"
+                                   autocomplete="email"
+                                   required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="contact-phone">Telephone Number</label>
+                            <input type="tel"
+                                   id="contact-phone"
+                                   name="telephone"
+                                   autocomplete="tel"
+                                   pattern="[0-9+() -]{7,20}"
+                                   required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="contact-type">Message Type</label>
+                            <select id="contact-type"
+                                    name="message_type"
+                                    required>
+                                <option value="">-- Select Option --</option>
+                                <option value="general">General Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message"
+                                      name="message"
+                                      rows="6"
+                                      minlength="10"
+                                      required></textarea>
+                        </div>
+
+                        <button class="btn btn-primary"
+                                type="submit">
+                            Send Message
+                        </button>
+
+                        <div class="status"
+                             role="status"
+                             aria-live="polite">
+                        </div>
+
+                    </form>
+                </section>
+
                 <!-- PART 3: Google Maps helps visitors find the main city location. -->
                 <section class="map-section">
                     <h2>Find Us</h2>
