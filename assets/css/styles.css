@@ -566,3 +566,13 @@ small {
         height: auto;
     }
 }
+
+
+/* PART 3: Keep the About page centred without HTML presentation attributes. */
+.about-page {
+    text-align: center;
+}
+
+.footer-text {
+    text-align: center;
+}
