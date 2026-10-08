@@ -475,3 +475,94 @@ small {
     font-size: 14px;
     color: #555555;
 }
+
+
+/* PART 3: Hidden class used by the JavaScript search. */
+.hidden {
+    display: none;
+}
+
+/* PART 3: Simple image gallery. */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.gallery-item {
+    width: 30%;
+    padding: 0;
+    background-color: #ffffff;
+    border: 1px solid #d9e0e6;
+}
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.gallery-item:hover,
+.gallery-item:focus {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+}
+
+/* PART 3: Lightbox created by JavaScript. */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.80);
+}
+
+.lightbox.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-box {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 75vh;
+    margin: 0 auto;
+}
+
+.lightbox-close {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+/* PART 3: Make the gallery easier to use on smaller screens. */
+@media (max-width: 700px) {
+    .gallery-item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 450px) {
+    .gallery-item {
+        width: 100%;
+    }
+
+    .gallery-image {
+        height: auto;
+    }
+}
