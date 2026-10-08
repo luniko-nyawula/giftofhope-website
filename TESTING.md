@@ -35,6 +35,10 @@ The navigation links were checked to make sure the existing page destinations re
 |---|---|---|
 | Services search | Matching programmes remain visible while other cards are hidden | Pass |
 | Services accordion | Clicking a question opens and closes its answer | Pass |
+| Services gallery | Clicking a gallery image opens a larger lightbox image | Pass |
+| Lightbox close | Close button and Escape key close the lightbox | Pass |
+| Contact form required fields | Browser prevents incomplete general messages | Pass |
+| Contact form email | A valid contact form prepares a mailto email | Pass |
 | Enquiry required fields | Browser prevents incomplete submissions | Pass |
 | Enquiry email | A valid form prepares a mailto email with the entered details | Pass |
 | Google Maps | Map is visible on the Contact page | Pass |
@@ -42,6 +46,12 @@ The navigation links were checked to make sure the existing page destinations re
 | Responsive layout | Website remains usable on desktop, tablet and mobile | Pass |
 | Sitemap and robots | Files are available in the project root | Pass |
 | GitHub Pages workflow | Workflow file is present and configured for main | Pass |
+
+### SEO structure check
+The About page was checked for one main H1 and logical H2 headings.
+
+### Presentation check
+No HTML `style` attributes or alignment presentation attributes are used on the Part 3 pages; styling is kept in the external stylesheet.
 
 ## Part 3 deployment note
 
