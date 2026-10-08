@@ -63,11 +63,13 @@ The website can be tested in a modern browser without installing extra software.
 Part 3 focuses on functionality, forms, SEO and deployment.
 
 ### JavaScript functionality
+- Added a simple image gallery with a lightbox on the Services page.
+- Added a separate general contact form on the Contact page.
 - Added a simple search box on the Services page.
 - Added a simple accordion for common questions.
 - Added a small page-load transition.
 - Improved the enquiry form with client-side validation.
-- The enquiry form prepares an email using the visitor's default email application.
+- The enquiry and contact forms prepare an email using the visitor's default email application.
 
 ### SEO improvements
 - Added relevant page descriptions and keywords.
