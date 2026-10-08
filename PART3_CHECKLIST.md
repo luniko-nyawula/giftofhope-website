@@ -4,9 +4,12 @@
 |---|---|
 | JavaScript functionality | `assets/js/script.js` |
 | Interactive element | Services page accordion |
+| Interactive map | Contact page Google Maps embed |
+| Animation / transition | Page-load transition and CSS transitions |
+| DOM manipulation | JavaScript search, accordion and lightbox |
 | Dynamic content/filtering | Services page programme search |
 | CSS/JavaScript transition | Page-load effect in CSS + JavaScript |
-| Functional HTML form | `pages/enquiry.html` |
+| Functional HTML form | `pages/enquiry.html` and `pages/contact.html` |
 | Client-side validation | `pages/enquiry.html` + `assets/js/script.js` |
 | Email functionality | JavaScript prepares a mailto email |
 | Page titles and meta descriptions | All five HTML pages |
@@ -17,6 +20,8 @@
 | Mobile friendliness | Existing Part 2 responsive CSS |
 | robots.txt | Project root |
 | sitemap.xml | Project root |
+| Image gallery / lightbox | Services page gallery + JavaScript lightbox |
+| Dynamic content | Service search result count and card visibility |
 | External service | Google Maps embed on Contact page |
 | Deployment | `.github/workflows/pages.yml` |
 | README | `README.md` |
