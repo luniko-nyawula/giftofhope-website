@@ -4,9 +4,11 @@
    The script is kept simple. It adds:
    - responsive navigation
    - service search
-   - a small accordion
-   - enquiry form validation and email support
-   - a simple page-load effect
+   - a FAQ accordion
+   - a simple image lightbox
+   - enquiry and contact form validation
+   - email preparation
+   - a small page-load effect
 */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -73,10 +75,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 var serviceName = card.getAttribute('data-service').toLowerCase();
 
                 if (serviceName.includes(searchText)) {
-                    card.style.display = 'inline-block';
+                    card.classList.remove('hidden');
                     visibleCount++;
                 } else {
-                    card.style.display = 'none';
+                    card.classList.add('hidden');
                 }
             });
 
@@ -87,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         serviceSearch.addEventListener('input', showServices);
-
         showServices();
     }
 
@@ -113,20 +114,87 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    /* PART 3: Enquiry form validation and email support. */
-    var enquiryForm = document.querySelector('#enquiry-form');
+    /* PART 3: Simple image gallery and lightbox. */
+    var galleryImages = document.querySelectorAll('.gallery-image');
 
-    if (enquiryForm) {
+    galleryImages.forEach(function (image) {
 
-        enquiryForm.addEventListener('submit', function (event) {
-            var status = document.querySelector('#form-status');
+        image.addEventListener('click', function () {
 
-            if (!enquiryForm.checkValidity()) {
+            var lightbox = document.querySelector('#lightbox');
+
+            if (!lightbox) {
+                lightbox = document.createElement('div');
+                lightbox.id = 'lightbox';
+                lightbox.className = 'lightbox';
+                lightbox.setAttribute('aria-hidden', 'true');
+
+                lightbox.innerHTML =
+                    '<div class="lightbox-box">' +
+                    '<button class="lightbox-close" type="button">Close</button>' +
+                    '<img class="lightbox-image" src="" alt="">' +
+                    '</div>';
+
+                document.body.appendChild(lightbox);
+
+                lightbox.querySelector('.lightbox-close')
+                    .addEventListener('click', closeLightbox);
+
+                lightbox.addEventListener('click', function (event) {
+                    if (event.target === lightbox) {
+                        closeLightbox();
+                    }
+                });
+            }
+
+            var largeImage = lightbox.querySelector('.lightbox-image');
+
+            largeImage.src = image.getAttribute('src');
+            largeImage.alt = image.getAttribute('alt');
+
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+        });
+    });
+
+
+    /* PART 3: Close the lightbox with the Escape key. */
+    function closeLightbox() {
+        var lightbox = document.querySelector('#lightbox');
+
+        if (lightbox) {
+            lightbox.classList.remove('open');
+            lightbox.setAttribute('aria-hidden', 'true');
+        }
+    }
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closeLightbox();
+        }
+    });
+
+
+    /* PART 3: Enquiry and contact form validation. */
+    function setupEmailForm(formId, recipient) {
+
+        var form = document.querySelector(formId);
+
+        if (!form) {
+            return;
+        }
+
+        form.addEventListener('submit', function (event) {
+
+            var status = form.querySelector('.status');
+
+            if (!form.checkValidity()) {
                 event.preventDefault();
-                enquiryForm.reportValidity();
+                form.reportValidity();
 
                 if (status) {
-                    status.textContent = 'Please complete all required fields before sending the enquiry.';
+                    status.textContent =
+                        'Please check the form and complete all required fields.';
                     status.classList.add('show', 'error');
                 }
 
@@ -135,37 +203,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
             event.preventDefault();
 
-            var fullName = document.querySelector('#fullname').value;
-            var email = document.querySelector('#email').value;
-            var phone = document.querySelector('#phone').value;
-            var enquiryType = document.querySelector('#enquiry-type').value;
-            var message = document.querySelector('#message').value;
+            var emailSubject = 'Gift of Hope Foundation Website Message';
+            var emailBody = '';
 
-            var emailSubject = encodeURIComponent(
-                'Gift of Hope Foundation Enquiry'
-            );
+            var fields = form.querySelectorAll('input, select, textarea');
 
-            var emailBody = encodeURIComponent(
-                'Full Name: ' + fullName + '\n' +
-                'Email: ' + email + '\n' +
-                'Phone: ' + phone + '\n' +
-                'Enquiry Type: ' + enquiryType + '\n\n' +
-                'Message:\n' + message
-            );
+            fields.forEach(function (field) {
+
+                if (field.name && field.type !== 'submit') {
+                    var label = field.name.replace(/_/g, ' ');
+                    emailBody +=
+                        label + ': ' + field.value + '\n';
+                }
+
+            });
 
             if (status) {
                 status.textContent =
-                    'Your email application will open with your enquiry details.';
+                    'Your email application will open with your message details.';
                 status.classList.remove('error');
                 status.classList.add('show');
             }
 
             window.location.href =
-                'mailto:info@giftofhope.org.za?subject=' +
-                emailSubject +
-                '&body=' +
-                emailBody;
+                'mailto:' + recipient +
+                '?subject=' + encodeURIComponent(emailSubject) +
+                '&body=' + encodeURIComponent(emailBody);
         });
     }
+
+    setupEmailForm('#enquiry-form', 'info@giftofhope.org.za');
+    setupEmailForm('#contact-form', 'info@giftofhope.org.za');
 
 });
