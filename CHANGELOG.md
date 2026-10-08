@@ -61,3 +61,15 @@ Simple keyboard focus states and navigation labels were kept in the Part 2 work.
 - The Part 1 and Part 2 website remains the base for Part 3.
 - The Part 3 additions use basic HTML, CSS and JavaScript so the project remains easy to understand.
 - The enquiry form still depends on the visitor having an email application configured on their device.
+
+
+### Part 3 compliance touch-ups - 8 October 2026
+
+| Area | Issue / requirement | Change made | Result |
+|---|---|---|---|
+| Functionality | The Part 3 guide requires an image gallery/lightbox | Added a three-image gallery on Services and a JavaScript lightbox with close controls | Users can click an image and view a larger version |
+| Forms | The guide requires separate enquiry and contact forms | Added a general contact form to Contact Us | Enquiry and contact now have different purposes |
+| Validation | Forms must provide HTML5 and JavaScript validation | Kept required, email, telephone pattern and message length validation and added JavaScript handling to both forms | Invalid input is stopped and feedback is shown |
+| SEO | Pages should have a clear heading structure | Removed the second H1 from About Us and changed it to H2 | About page now has one main H1 |
+| Presentation | Styling should remain in the external stylesheet | Removed old HTML alignment attributes from About Us and moved alignment to CSS | No inline style attribute or presentation alignment is used |
+| Evidence | Testing must cover new Part 3 features | Added gallery and contact-form checks to TESTING.md | The new requirements are traceable in the repository |
