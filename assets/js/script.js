@@ -56,6 +56,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
+    /* PART 3: Show today's date automatically. */
+    var todayDate = document.querySelector('#today-date');
+
+    if (todayDate) {
+        var today = new Date();
+        todayDate.textContent = today.toLocaleDateString('en-ZA', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+    }
+
+
     /* PART 3: Add a small page-load transition. */
     document.body.classList.add('page-ready');
 
